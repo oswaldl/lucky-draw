@@ -39,6 +39,9 @@
             addCandidate: function(v) {
                 $.post('/addCandidate', {'candidate': v});
             },
+            resetCandidate: function(v) {
+                $.post('/resetCandidate');
+            },
             removeCandidate: function (v) {
                 $.post('/removeCandidate', { 'candidate': v });
             },

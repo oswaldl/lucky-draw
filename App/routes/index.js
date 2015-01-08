@@ -14,6 +14,12 @@ router.post("/addCandidate", function(req, res) {
     res.end();
 });
 
+router.post("/resetCandidate", function(req, res) {
+    candidates = require('../conf').preloadCandidates;
+    boardcastCandidates();
+    res.end();
+});
+
 router.post('/removeCandidate', function(req, res) {
     var val = req.param('candidate');
     candidates = _.without(candidates, val);

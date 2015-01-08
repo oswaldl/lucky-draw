@@ -39,6 +39,10 @@
                                               this.refs.candidateInput.getDOMNode().value = "";
                                               machine.addCandidate(val);
                                           },
+                                          handleReset: function(e) {
+                                              e.preventDefault();
+                                              machine.resetCandidate();
+                                          },
                                           handleDelete: function(val) {
                                               machine.removeCandidate(val);
                                           },
@@ -77,6 +81,7 @@
                                                           </div>
                                                           <div className="btn-set">
                                                               <button className="btn primary-btn btn-done" onClick={this.handleInputDone}>Done</button>
+                                                              <button className="btn primary-btn btn-done" onClick={this.handleReset}>Reload Default</button>
                                                           </div>
                                                       </form>
                                                   </div>
